@@ -611,21 +611,20 @@ public class CTeNotaInfoIdentificacao extends DFBase {
     /**
      * Grupo de antecipacao de pagamento (ide/gPagAntecipado).<br>
      * Contem de 1 a 99 chaves de acesso de CT-e de pagamento antecipado
-     * (chCTePagAnt, com tpPagAnt = 1).
+     * (chDFePagAnt, com tpPagAnt = 1).
      */
     @Root(name = "gPagAntecipado")
-    @Namespace(reference = CTeConfig.NAMESPACE)
     public static class GrupoPagamentoAntecipado extends DFBase {
         private static final long serialVersionUID = 7938149076755500267L;
 
         @ElementList(entry = "chCTePagAnt", inline = true, required = true)
         private List<String> chavesPagamentoAntecipado;
 
-        public List<String> getChCTePagAnt() {
+        public List<String> getChavesPagamentoAntecipado() {
             return this.chavesPagamentoAntecipado;
         }
 
-        public void setChCTePagAnt(final List<String> chavesPagamentoAntecipado) {
+        public void setChavesPagamentoAntecipado(final List<String> chavesPagamentoAntecipado) {
             this.chavesPagamentoAntecipado = chavesPagamentoAntecipado;
         }
     }
